@@ -40,6 +40,20 @@ The installer will:
 3. Open tmux, press `C-a I` to install tmux plugins
 4. Set your terminal font to **JetBrainsMono Nerd Font**
 
+## Mason packages
+
+Installed automatically via `:MasonInstallAll`:
+
+| Package | Type | Languages |
+|---|---|---|
+| `typescript-language-server` | LSP | TypeScript, JavaScript |
+| `tailwindcss-language-server` | LSP | Tailwind CSS |
+| `eslint-lsp` | LSP | TypeScript, JavaScript |
+| `html-lsp` | LSP | HTML |
+| `css-lsp` | LSP | CSS |
+| `prettier` | Formatter | TS, JS, CSS, HTML, JSON |
+| `stylua` | Formatter | Lua |
+
 ## Key bindings
 
 ### tmux (prefix: `C-a`)
