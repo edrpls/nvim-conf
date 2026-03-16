@@ -72,6 +72,7 @@ install_pkg() {
 
 #                cmd       pacman          apt                 dnf             brew
 install_pkg     nvim      "neovim"        "neovim"            "neovim"        "neovim"
+install_pkg     tmux      "tmux"          "tmux"              "tmux"          "tmux"
 install_pkg     gcc       "gcc"           "gcc"               "gcc"           "gcc"
 install_pkg     make      "make"          "make"              "make"          "make"
 install_pkg     rg        "ripgrep"       "ripgrep"           "ripgrep"       "ripgrep"
@@ -166,17 +167,11 @@ echo "Bootstrapping Neovim plugins (this may take a minute)..."
 nvim --headless "+Lazy! sync" +qa 2>/dev/null
 echo "Plugins installed."
 
-echo "Running MasonInstallAll..."
-nvim --headless "+MasonInstallAll" +qa 2>/dev/null || true
-echo "Mason packages installed."
-
-echo "Running TSInstallAll..."
-nvim --headless "+TSInstallAll" +qa 2>/dev/null || true
-echo "Tree-sitter parsers installed."
-
 # -- Done ----------------------------------------------------------------------
 
 echo ""
 echo "Done! Next steps:"
-echo "  1. Open tmux, then press prefix + I (C-a + I) to install tmux plugins"
-echo "  2. Test navigation: open nvim inside tmux, create splits, and use C-h/j/k/l"
+echo "  1. Open nvim and run :MasonInstallAll and :TSInstallAll"
+echo "  2. Restart nvim for theme cache to load"
+echo "  3. Open tmux, then press prefix + I (C-a + I) to install tmux plugins"
+echo "  4. Test navigation: open nvim inside tmux, create splits, and use C-h/j/k/l"
