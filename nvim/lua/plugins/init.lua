@@ -26,4 +26,34 @@ return {
       },
     },
   },
+
+  {
+    "echasnovski/mini.surround",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "echasnovski/mini.ai",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "echasnovski/mini.move",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "echasnovski/mini.splitjoin",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "echasnovski/mini.indentscope",
+    event = "VeryLazy",
+    opts = {},
+  },
 }
