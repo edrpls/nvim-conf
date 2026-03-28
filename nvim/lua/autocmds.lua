@@ -32,7 +32,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     if vim.fn.argc() == 0 then
-      vim.cmd("NvimTreeFocus")
+      vim.schedule(function()
+        require("nvim-tree.api").tree.toggle({ focus = false })
+      end)
     end
   end,
 })
