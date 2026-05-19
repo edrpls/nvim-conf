@@ -57,10 +57,18 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  { 'nvim-mini/mini.nvim', version = false },
+
   {
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = { "markdown", "markdown_inline" },
+    },
+  },
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = { "markdown" },
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
     opts = {},
-  }
+  },
 }
